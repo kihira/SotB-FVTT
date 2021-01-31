@@ -1,0 +1,11 @@
+{
+    "name": "shadowofthebeanstalk",
+    "title": "Shadow of the Beanstalk Sheet and Theme",
+    "description": "",
+    "author": "Kihira",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.7.0",
+    "system": "starwarsffg",
+    "esmodules": [ "scripts/main.js" ],
+    "styles": [ "styles/main.css" ]
+}

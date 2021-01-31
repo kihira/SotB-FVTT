@@ -1,0 +1,118 @@
+@import "fonts";
+
+$teal: rgb(0, 130, 155);
+$very-light-blue: rgb(234, 242, 246);
+
+$orange: rgb(170, 73, 23);
+$very-light-orange: rgb(255, 244, 233);
+$soft-blue: rgb(61, 153, 213);
+
+$light-teal: rgb(65, 178, 180);
+$very-dark-green: rgb(31, 48, 44);
+$very-dark-grey: rgb(30, 30, 28);
+$very-light-green: rgb(202, 231, 238);
+$light-blue: rgb(167, 218, 243);
+
+.sotb {
+    font-family: 'Minion Pro';
+    font-size: 11pt;
+    color: black;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Monkirta Pursuit';
+        text-transform: uppercase;
+        color: $teal;
+    }
+
+    h1 {
+        font-size: 32pt;
+        border-bottom: none;
+    }
+    h2 {
+        font-size: 21pt;
+        border-bottom: none;
+    }
+    h3 {
+        font-size: 16pt;
+        font-style: italic;
+    }
+    h4 {
+        font-size: 13pt;
+    }
+
+    hr {
+        border-color: $very-light-blue;
+    }
+    
+    li::marker {
+        color: $teal;
+    }
+
+    p:not(:first-child) {
+        text-indent: 5mm;
+    }
+
+    p {
+        margin-bottom: 2mm;
+    }
+
+    .table-header {
+        font-family: 'Bebas Neue';
+        font-size: 17pt;
+        color: $teal;
+    }
+
+    table {
+        border-color: #000000;
+
+        thead tr {
+            background-color: $teal;
+
+            td {
+                font-family: 'Bebas Neue';
+                font-weight: bold;
+                font-size: 14pt;
+                color: white;
+                text-shadow: none;
+            }
+        }
+        tbody {
+            tr.subsection td {
+                font-family: 'Minion Pro';
+                font-size: 10.5pt;
+                color: white;
+                background-color: #232323;
+            }
+            tr:nth-child(odd) {
+                background-color: $very-light-blue;
+            }
+            tr:nth-child(even) {
+                background-color: transparent;
+            }
+            td {
+                font-family: 'Minion Pro';
+                font-size: 10.5pt;
+                color: black;
+            }
+        }
+        td {
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+// .starwarsffg.sheet.actor {
+//     .characteristic-item {
+//         .characteristic-label {
+//             background-color: #000000;
+//         }
+//     }
+// }
+
+// .starwarsffg.sheet.actor {
+//     div.stat-block {
+//         width: 10px;
+//     }
+// }

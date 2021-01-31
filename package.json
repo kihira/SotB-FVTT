@@ -1,0 +1,9 @@
+{
+    "name": "shadowofthebeanstalk",
+    "dependencies": {
+        "sass": "1.32.5"
+    },
+    "devDependencies": {
+        "foundry-pc-types": "gitlab:foundry-projects/foundry-pc/foundry-pc-types"
+    }
+}
