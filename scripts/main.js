@@ -1,33 +1,16 @@
-import { ActorSheetFFG } from "../../../systems/starwarsffg/modules/actors/actor-sheet-ffg.js";
+import { IceItemSheet } from "./ice-sheet.js";
+import { SOTBActorSheet } from "./sotb-actor-sheet.js";
 
-class CyberpunkActorSheet extends ActorSheetFFG
+Hooks.once("init", () => 
 {
-    /**
-     * @override
-     */
-    static get defaultOptions()
-    {
-        return mergeObject(super.defaultOptions, {
-            classes: ["starwarsffg", "sheet", "actor", "cyberpunk"],
-            template: "modules/shadowofthebeanstalk/templates/actor.html",
-            width: 710,
-            height: 650,
-            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "characteristics" }],
-            scrollY: [".tableWithHeader", ".tab", ".skillsGrid"],
-        });
-    }
+    CONFIG.debug.hooks = true;
 
-    /**
-     * @override
-     */
-    get template()
+    Actors.registerSheet("sotb", SOTBActorSheet,
     {
-        return `modules/shadowofthebeanstalk/templates/actor.html`;
-    }
-}
+        types: ["character"],
+        label: "Shadow of the Beanstalk",
+    });
 
-Actors.registerSheet("starwarsffg", CyberpunkActorSheet,
-{
-    types: ["character"],
-    label: "Shadow of the Beanstalk",
+    Items.registerSheet("sotb", IceItemSheet, { label: "Ice Sheet" });
+
 });
